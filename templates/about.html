@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-
+  {% load static %}  <!-- {% load static %}  to load the static folder -->
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -42,10 +42,7 @@
                     </li>
 
                 </ul>
-                <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
+                
             </div>
         </div>
     </nav>
@@ -60,31 +57,31 @@
                 <div class="card" style="width: 18rem;">
                     <img src="https://source.unsplash.com/500x300/?keyboard" class="card-img-top" alt="...">
                     <div class="card-body">
-                      <h5 class="card-title">Coder</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                      <h5 class="card-title">Masters</h5>
+                      <p class="card-text">College:- {{college}}<br> Course :-  {{course1}} <br> Grades :- {{grade1}}%</p>
+                      <a href="https://www.cuchd.in/" class="btn btn-primary">Chandigarh University</a>
                     </div>
                   </div>
             </div>
 
             <div class="col-md-4">
                 <div class="card" style="width: 18rem;">
-                    <img src="https://source.unsplash.com/500x300/?running" class="card-img-top" alt="...">
+                    <img src="https://source.unsplash.com/500x300/?college" class="card-img-top" alt="...">
                     <div class="card-body">
-                      <h5 class="card-title">Sports Man</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                      <h5 class="card-title">Graduation</h5>
+                      <p class="card-text">College:- {{graduation}}<br> Course :-  {{course2}} <br> Grades :- {{grade2}}%</p>
+                      <a href="https://www.deshbandhucollege.ac.in/" class="btn btn-primary">Delhi University</a>
                     </div>
                   </div>
             </div>
 
             <div class="col-md-4">   <!--.div-col-md-4  to make div in cards-->
                 <div class="card" style="width: 18rem;">
-                    <img src="https://source.unsplash.com/500x300/?roadtrip" class="card-img-top" alt="...">
+                    <img src="https://source.unsplash.com/500x300/?school" class="card-img-top" alt="...">
                     <div class="card-body">
-                      <h5 class="card-title">Explorer</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                      <h5 class="card-title">Schooling</h5>
+                      <p class="card-text">Institution:- {{school}} <br> Location : :-  {{place}} <br> Grades: :  : :-     {{grade3}}% </p>
+                      <a href="https://www.apsdk.com/home" class="btn btn-primary">APS Dhaula Kuan</a>
                     </div>
                   </div>
             </div>
@@ -93,15 +90,57 @@
     </div> 
 
     <div class="container text-center my-3">
-        <h1>Tutorial Video</h1>
+        <h3>Entertainer</h3>
         <div class="embed-responsive embed-responsive-210by70">
-            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen></iframe>
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/tgbNymZ7vqY" allowfullscreen></iframe>
         </div>
-        l<p>
-            This a video tutorial.
+        <p>
+            Life is a graceful gift of God!!!
         </p>
     </div>
-    <footer class="text-center text-light bg-dark">All rights reserved</footer>
+    
+    <div class="container my-3">
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active ">
+                <img src="{% static 'image/sparkathon.png' %}" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item text-dark">
+                <img src="/static/image/dataAnalyticsCer.png" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="https://source.unsplash.com/1900x500/?hobbies" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block text-dark">
+                  <h5>Hobbies</h5>
+                  <p>It is something that keeps you up when you have time for yourselves</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="{% static 'image/Hobbies.jpg' %}" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block text-light">
+                  <h5>Hobbies</h5>
+                  <p>It is something that keeps you up when you have time for yourselves and fill colours to life</p>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+    </div>
+
+    <footer class="text-center text-light bg-dark">--{{name}}</footer>
 
     <!-- Optional JavaScript; choose one of the two! -->
 
@@ -115,6 +154,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
     -->
+
 </body>
 
 </html>

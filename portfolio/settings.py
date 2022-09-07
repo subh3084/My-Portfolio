@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -55,7 +56,7 @@ ROOT_URLCONF = 'portfolio.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates'],   #we have entered the name of directory as template which has all the templates
+        'DIRS': ['templates'],   #we have entered the name of directory as template which has all the templates i.e html files
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -116,7 +117,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = 'static/'   # changed the name from static to images as my static file is named images
+
+STATICFILES_DIRS = [ 
+                        os.path.join(BASE_DIR,'static')  # os.path.join(BASE_DIR, 'static dir name')  used to make path absolute
+                    ]  # self inserted, this is where the Django will look for the static files
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
